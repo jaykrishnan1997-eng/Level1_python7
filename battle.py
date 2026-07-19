@@ -34,5 +34,6 @@ def main():
 
     battle(ff, af)
 
+
 if __name__ == "__main__":
     main()
