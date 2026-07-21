@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/21 10:12:30 by jkrishna            #+#    #+#            #
-#   Updated: 2026/07/21 10:47:18 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/07/21 11:27:32 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -31,7 +31,7 @@ class BattleStrategy(ABC):
         if not self.is_valid(creature):
             strategy_name = type(self).__name__.replace("Strategy", "").lower()
             raise InvalidStrategyError(
-                f"Invalid Creature '{creature._name}'"
+                f"Invalid Creature '{creature._name}' "
                 f"for this {strategy_name} strategy"
             )
         return self.act(creature)

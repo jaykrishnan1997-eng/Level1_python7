@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/21 10:12:52 by jkrishna            #+#    #+#            #
-#   Updated: 2026/07/21 10:12:53 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/07/21 11:25:03 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -16,6 +16,8 @@ from .creatures import Sproutling, Bloomelle, Shiftling, Morphagon
 
 
 class HealingCreatureFactory(CreatureFactory):
+    label = "Healing"
+
     def create_base(self) -> Sproutling:
         s = Sproutling("Sproutling", "Grass")
         return s
@@ -26,6 +28,8 @@ class HealingCreatureFactory(CreatureFactory):
 
 
 class TransformCreatureFactory(CreatureFactory):
+    label = "Transform"
+
     def create_base(self) -> Shiftling:
         s = Shiftling("Shiftling", "Normal")
         return s

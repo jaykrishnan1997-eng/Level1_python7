@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/21 10:12:43 by jkrishna            #+#    #+#            #
-#   Updated: 2026/07/21 10:39:02 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/07/21 10:59:06 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -32,7 +32,7 @@ def battle(factory1: CreatureFactory, factory2: CreatureFactory) -> None:
     c1 = factory1.create_base()
     c2 = factory2.create_base()
 
-    print(f"{c1.describe()}\n vs. \n{c2.describe()}")
+    print(f"{c1.describe()}\n vs.\n{c2.describe()}")
     print(" fight!")
     print(c1.attack())
     print(c2.attack())

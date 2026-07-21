@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/21 10:13:07 by jkrishna            #+#    #+#            #
-#   Updated: 2026/07/21 10:13:08 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/07/21 10:55:28 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -28,36 +28,20 @@ class Creature(ABC):
 
 
 class Flameling(Creature):
-    def __init__(self, name: str, typ: str) -> None:
-        self._name = name
-        self._typ = typ
-
     def attack(self) -> str:
         return "Flameling uses Ember!"
 
 
 class Pyrodon(Creature):
-    def __init__(self, name: str, typ: str) -> None:
-        self._name = name
-        self._typ = typ
-
     def attack(self) -> str:
         return "Pyrodon uses Flamethrower!"
 
 
 class Aquabub(Creature):
-    def __init__(self, name: str, typ: str) -> None:
-        self._name = name
-        self._typ = typ
-
     def attack(self) -> str:
         return "Aquabub uses Water Gun!"
 
 
 class Torragon(Creature):
-    def __init__(self, name: str, typ: str) -> None:
-        self._name = name
-        self._typ = typ
-
     def attack(self) -> str:
         return "Torragon uses Hydro Pump!"

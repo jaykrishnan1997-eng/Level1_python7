@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/21 10:08:23 by jkrishna            #+#    #+#            #
-#   Updated: 2026/07/21 10:47:52 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/07/21 11:26:27 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -23,8 +23,12 @@ from ex2.strategies import BattleStrategy
 
 
 def battle(opponents: List[Tuple[CreatureFactory, BattleStrategy]]) -> None:
+    summary = ", ".join(
+        f"({f.label}+{type(s).__name__.replace('Strategy', '')})"
+        for f, s in opponents
+    )
+    print(f"[ {summary} ]")
     print(f"*** Tournament ***\n{len(opponents)} opponents involved")
-
     for i in range(len(opponents)):
         for j in range(i + 1, len(opponents)):
             factory1, strategy1 = opponents[i]
@@ -34,8 +38,8 @@ def battle(opponents: List[Tuple[CreatureFactory, BattleStrategy]]) -> None:
             creature2 = factory2.create_base()
 
             print("\n* Battle *")
-            print(f"{creature1.describe()} vs. {creature2.describe()}")
-            print("now fight!")
+            print(f"{creature1.describe()}\n vs.\n{creature2.describe()}")
+            print(" now fight!")
 
             try:
                 print(strategy1.perform(creature1))

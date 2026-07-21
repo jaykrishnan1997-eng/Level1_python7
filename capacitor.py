@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/21 10:12:40 by jkrishna            #+#    #+#            #
-#   Updated: 2026/07/21 10:41:15 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/07/21 11:28:55 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -19,12 +19,12 @@ def test_healing(factory: HCF) -> None:
     evolved = factory.create_evolved()
 
     print("Testing Creature with healing capability")
-    print("base:")
+    print(" base:")
     print(base.describe())
     print(base.attack())
     print(base.heal())
 
-    print("evolved:")
+    print(" evolved:")
     print(evolved.describe())
     print(evolved.attack())
     print(evolved.heal())
@@ -35,14 +35,14 @@ def test_transform(factory: TCF) -> None:
     evolved = factory.create_evolved()
 
     print("Testing Creature with transform capability")
-    print("base:")
+    print(" base:")
     print(base.describe())
     print(base.attack())
     print(base.transform())
     print(base.attack())
     print(base.revert())
 
-    print("evolved:")
+    print(" evolved:")
     print(evolved.describe())
     print(evolved.attack())
     print(evolved.transform())
