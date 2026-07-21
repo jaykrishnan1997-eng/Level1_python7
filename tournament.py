@@ -1,8 +1,28 @@
-from ex0 import FlameFactory, AquaFactory
-from ex1 import HealingCreatureFactory, TransformCreatureFactory
-from ex2 import NormalStrategy, AggressiveStrategy, DefensiveStrategy, InvalidStrategyError
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   tournament.py                                        :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/07/21 10:08:23 by jkrishna            #+#    #+#            #
+#   Updated: 2026/07/21 10:47:52 by jkrishna           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
 
-def battle(opponents):
+from typing import List, Tuple
+from ex0 import FlameFactory, AquaFactory
+from ex0.factories import CreatureFactory
+from ex1 import HealingCreatureFactory, TransformCreatureFactory
+from ex2 import (
+    NormalStrategy, AggressiveStrategy,
+    DefensiveStrategy, InvalidStrategyError
+)
+from ex2.strategies import BattleStrategy
+
+
+def battle(opponents: List[Tuple[CreatureFactory, BattleStrategy]]) -> None:
     print(f"*** Tournament ***\n{len(opponents)} opponents involved")
 
     for i in range(len(opponents)):
@@ -24,7 +44,8 @@ def battle(opponents):
                 print(f"Battle error, aborting tournament: {e}")
                 return
 
-def main():
+
+def main() -> None:
     print("Tournament 0 (basic)")
     battle([
         (FlameFactory(), NormalStrategy()),

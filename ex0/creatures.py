@@ -1,13 +1,26 @@
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   creatures.py                                         :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/07/21 10:13:07 by jkrishna            #+#    #+#            #
+#   Updated: 2026/07/21 10:13:08 by jkrishna           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
+
 from abc import ABC, abstractmethod
 
 
 class Creature(ABC):
-    def __init__(self, name, typ) -> None:
+    def __init__(self, name: str, typ: str) -> None:
         self._name = name
         self._typ = typ
 
     @abstractmethod
-    def attack(self) -> None:
+    def attack(self) -> str:
         pass
 
     def describe(self) -> str:

@@ -1,7 +1,20 @@
-from ex1 import HealingCreatureFactory, TransformCreatureFactory
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   capacitor.py                                         :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/07/21 10:12:40 by jkrishna            #+#    #+#            #
+#   Updated: 2026/07/21 10:41:15 by jkrishna           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
+
+from ex1 import HealingCreatureFactory as HCF, TransformCreatureFactory as TCF
 
 
-def test_healing(factory):
+def test_healing(factory: HCF) -> None:
     base = factory.create_base()
     evolved = factory.create_evolved()
 
@@ -17,7 +30,7 @@ def test_healing(factory):
     print(evolved.heal())
 
 
-def test_transform(factory):
+def test_transform(factory: TCF) -> None:
     base = factory.create_base()
     evolved = factory.create_evolved()
 
@@ -37,9 +50,9 @@ def test_transform(factory):
     print(evolved.revert())
 
 
-def main():
-    healing = HealingCreatureFactory()
-    transform = TransformCreatureFactory()
+def main() -> None:
+    healing = HCF()
+    transform = TCF()
 
     test_healing(healing)
     print()

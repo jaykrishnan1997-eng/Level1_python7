@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   factories.py                                         :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/07/21 10:13:04 by jkrishna            #+#    #+#            #
+#   Updated: 2026/07/21 10:13:05 by jkrishna           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
+
 from abc import ABC, abstractmethod
 from .creatures import Creature, Flameling, Pyrodon, Aquabub, Torragon
 

@@ -1,7 +1,21 @@
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   battle.py                                            :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/07/21 10:12:43 by jkrishna            #+#    #+#            #
+#   Updated: 2026/07/21 10:39:02 by jkrishna           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
+
 from ex0 import FlameFactory, AquaFactory
+from ex0.factories import CreatureFactory
 
 
-def test_factory(factory):
+def test_factory(factory: CreatureFactory) -> None:
     print("Testing factory")
     base = factory.create_base()
     evolved = factory.create_evolved()
@@ -13,7 +27,7 @@ def test_factory(factory):
     print(evolved.attack())
 
 
-def battle(factory1, factory2) -> None:
+def battle(factory1: CreatureFactory, factory2: CreatureFactory) -> None:
     print("Testing battle")
     c1 = factory1.create_base()
     c2 = factory2.create_base()
@@ -24,7 +38,7 @@ def battle(factory1, factory2) -> None:
     print(c2.attack())
 
 
-def main():
+def main() -> None:
     ff = FlameFactory()
     af = AquaFactory()
 
